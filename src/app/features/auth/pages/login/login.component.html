@@ -1,0 +1,18 @@
+<div class="container">
+  <form (ngSubmit)="login()">
+    <label for="email">Insira seu e-mail</label>
+    <input type="text" name="email" id="email-input" [(ngModel)]="email" />
+    <label for="email">Insira sua senha</label>
+    <input
+      type="{{ passwordFieldType }}"
+      name="password"
+      id="password-input"
+      [(ngModel)]="password"
+    />
+    <button type="button" (click)="changePasswordFieldType()">eye</button>
+    <div class="bottom">
+      <button type="submit" class="st-primary-button">Login</button>
+      <button type="button" class="st-primary-button" (click)="goToRegister()">Registrar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,33 @@
+@use './variables' as variable;
+
+@mixin generic-button-styles() {
+  border: none;
+  cursor: pointer;
+}
+
+@mixin sm-button-styles($bg-color, $text-color) {
+  @include generic-button-styles();
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 0.5rem;
+  padding: 4px 16px;
+  border-radius: variable.$default-radius;
+}
+
+@mixin st-button-styles($bg-color, $text-color) {
+  @include generic-button-styles();
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border-radius: variable.$default-radius;
+}
+
+@mixin lg-button-styles($bg-color, $text-color) {
+  @include generic-button-styles();
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 1.5rem;
+  padding: 12px 24px;
+  border-radius: variable.$default-radius;
+}

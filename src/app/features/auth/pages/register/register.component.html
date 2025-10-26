@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form-container">
+    <label for="name">Insira seu nome completo</label>
+    <input type="text" name="name" id="name-input" [(ngModel)]="name" />
+    <label for="email">Insira seu e-mail</label>
+    <input type="text" name="email" id="email-input" [(ngModel)]="email" />
+    <label for="password">Insira sua senha</label>
+    <input type="password" name="password" id="password-input" [(ngModel)]="password" />
+    <button (click)="register()">REGISTRAR</button>
+  </div>
+  <button (click)="goToLogin()">Já tem uma conta? Faça login!</button>
+</div>

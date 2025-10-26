@@ -1,0 +1,11 @@
+@use './variables' as variable;
+@use './mixins' as mixin;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.sm-primary-button {
+  @include mixin.sm-button-styles(variable.$primary-color, variable.$white);
+}
+
+.st-primary-button {
+  @include mixin.st-button-styles(variable.$primary-color, variable.$white);
+}

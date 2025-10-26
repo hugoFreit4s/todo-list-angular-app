@@ -1,0 +1,6 @@
+@use './app/styles/variables' as variable;
+
+body {
+  background-color: variable.$bg-color;
+  font-family: variable.$primary-font;
+}
