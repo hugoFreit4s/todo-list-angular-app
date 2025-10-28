@@ -3,13 +3,15 @@ import { Router, RouterModule } from '@angular/router';
 import { LoginUserRequestDTO } from '../../../../types/user.types';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '../../../../services/auth/auth.service';
+import { CustomButton } from '../../../../shared/components/button/button.component';
+import { CustomInput } from '../../../../shared/components/input/input.component';
 
 @Component({
   selector: 'login-page',
   standalone: true,
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css', '../../../../styles/app.scss'],
-  imports: [RouterModule, FormsModule],
+  styleUrls: ['./login.component.scss', '../../../../styles/app.scss'],
+  imports: [RouterModule, FormsModule, CustomButton, CustomInput],
 })
 export class LoginPageComponent {
   email: string = '';

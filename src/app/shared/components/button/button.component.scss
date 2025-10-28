@@ -1,0 +1,26 @@
+@use '../../../styles/mixins' as mixin;
+@use '../../../styles/variables' as variable;
+
+button {
+  @include mixin.generic-button-styles();
+}
+
+.small {
+  @include mixin.sm-button-styles();
+}
+
+.standard {
+  @include mixin.st-button-styles();
+}
+
+.large {
+  @include mixin.lg-button-styles();
+}
+
+.primary {
+  @include mixin.primary-button-styles();
+}
+
+.secondary {
+  @include mixin.secondary-button-styles();
+}

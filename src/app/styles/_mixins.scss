@@ -3,31 +3,38 @@
 @mixin generic-button-styles() {
   border: none;
   cursor: pointer;
+  border-radius: variable.$default-radius;
+  text-transform: uppercase;
 }
 
-@mixin sm-button-styles($bg-color, $text-color) {
+@mixin sm-button-styles() {
   @include generic-button-styles();
-  background-color: $bg-color;
-  color: $text-color;
   font-size: 0.5rem;
   padding: 4px 16px;
-  border-radius: variable.$default-radius;
 }
 
-@mixin st-button-styles($bg-color, $text-color) {
+@mixin st-button-styles() {
   @include generic-button-styles();
-  background-color: $bg-color;
-  color: $text-color;
   font-size: 1rem;
+  font-weight: 600;
   padding: 8px 20px;
-  border-radius: variable.$default-radius;
 }
 
-@mixin lg-button-styles($bg-color, $text-color) {
+@mixin lg-button-styles() {
   @include generic-button-styles();
-  background-color: $bg-color;
-  color: $text-color;
   font-size: 1.5rem;
-  padding: 12px 24px;
-  border-radius: variable.$default-radius;
+  padding: 12px 36px;
+  font-weight: 600;
+}
+
+@mixin primary-button-styles() {
+  @include generic-button-styles();
+  background-color: variable.$primary-color;
+  color: white;
+}
+
+@mixin secondary-button-styles() {
+  @include generic-button-styles();
+  background-color: variable.$secondary-color;
+  color: black;
 }
